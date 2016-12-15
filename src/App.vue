@@ -24,7 +24,7 @@ import Vue from 'vue'
 import VueSocketio from 'vue-socket.io'
 // Vue.use(VueSocketio, 'http://192.168.0.133:3000/') // Automaticly socket connect from url string
 // Vue.use(VueSocketio, 'https://chichkyz.herokuapp.com/')
-Vue.use(VueSocketio, 'https://chick-socket-2-whitekkk.c9users.io/')
+Vue.use(VueSocketio, 'https://chick-socket-whitekkk.c9users.io/')
 var config = {
   apiKey: 'AIzaSyCPjSZnxBY9KLykYc18iW4yNVTbQyaBPsU',
   authDomain: 'chickyz-afcfe.firebaseapp.com',
