@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "chick-socket",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "whitekkk <white_itsme@hotmail.com>",
@@ -10,15 +10,10 @@
     "unit": "karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "start": "node server.js"
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
   },
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "socket.io": "^1.7.2",
-    "vue": "^2.1.0",
-    "vue-socket.io": "^2.0.1"
+    "vue": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -83,10 +78,5 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
-  },
-  "main": "server.js",
-  "directories": {
-    "test": "test"
-  },
-  "license": "ISC"
+  }
 }

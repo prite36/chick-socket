@@ -1,4 +1,4 @@
-# client
+# chick-socket
 
 > A Vue.js project
 

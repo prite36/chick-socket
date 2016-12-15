@@ -23,7 +23,7 @@ import firebase from 'firebase'
 import Vue from 'vue'
 import VueSocketio from 'vue-socket.io'
 // Vue.use(VueSocketio, 'http://192.168.0.133:3000/') // Automaticly socket connect from url string
-Vue.use(VueSocketio, 'https://chichkyz.herokuapp.com/')
+Vue.use(VueSocketio, 'https://1.20.176.67/')
 
 var config = {
   apiKey: 'AIzaSyCPjSZnxBY9KLykYc18iW4yNVTbQyaBPsU',
@@ -514,7 +514,7 @@ export default {
         })
       }
       vm.hOFs.sort((parameterOne, parameterTwo) => parameterTwo.score - parameterOne.score)
-      vm.hOFs = vm.hOFs.slice(0, 3)
+      vm.hOFs = vm.hOFs.slice(0, 2)
       // vm.hOFs.sort((parameterOne, parameterTwo) => parameterTwo.score - parameterOne.score)
     },
     updateScore () {
