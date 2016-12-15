@@ -56,6 +56,7 @@ export default {
       item.id = snapshot.key
       vm.hOFs.push(item)
       vm.hOFs.sort((parameterOne, parameterTwo) => parameterTwo.score - parameterOne.score)
+      vm.hOFs = vm.hOFs.slice(0, 3)
     })
     HOFs.on('child_changed', function (snapshot) {
       var id = snapshot.key
@@ -94,6 +95,7 @@ export default {
           vm.wait = true
           vm.waitingTime = 3
           vm.checkName = true
+          vm.scoreColor = '#FFFFFF'
           myId = ''
         }
       }
