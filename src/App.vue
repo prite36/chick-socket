@@ -95,6 +95,7 @@ export default {
           vm.wait = true
           vm.waitingTime = 3
           vm.checkName = true
+          vm.scoreColor = '#FFFFFF'
           myId = ''
         }
       }
