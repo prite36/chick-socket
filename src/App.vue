@@ -22,8 +22,8 @@ import PopUp from './components/PopUp'
 import firebase from 'firebase'
 import Vue from 'vue'
 import VueSocketio from 'vue-socket.io'
-Vue.use(VueSocketio, 'http://192.168.0.133:3000/') // Automaticly socket connect from url string
-// Vue.use(VueSocketio, 'https://chichkyz.herokuapp.com/')
+// Vue.use(VueSocketio, 'http://192.168.0.133:3000/') // Automaticly socket connect from url string
+Vue.use(VueSocketio, 'https://chichkyz.herokuapp.com/')
 
 var config = {
   apiKey: 'AIzaSyCPjSZnxBY9KLykYc18iW4yNVTbQyaBPsU',
@@ -56,7 +56,6 @@ export default {
       item.id = snapshot.key
       vm.hOFs.push(item)
       vm.hOFs.sort((parameterOne, parameterTwo) => parameterTwo.score - parameterOne.score)
-      vm.hOFs = vm.hOFs.slice(0, 3)
     })
     HOFs.on('child_changed', function (snapshot) {
       var id = snapshot.key
@@ -95,7 +94,6 @@ export default {
           vm.wait = true
           vm.waitingTime = 3
           vm.checkName = true
-          vm.scoreColor = '#FFFFFF'
           myId = ''
         }
       }
