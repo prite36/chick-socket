@@ -70,6 +70,7 @@ io.on('connection', function (socket) {
         }
       }
     }
+    io.emit('update', i)
   }, 10)
 
   var length = 0
@@ -144,11 +145,6 @@ io.on('connection', function (socket) {
     //     avatars[index].time = n
     //   }
     // }
-    var i = 0
-    while (true) {
-      i++
-      io.emit('update', i)
-    }
     // io.emit('update', data)
   })
 })
