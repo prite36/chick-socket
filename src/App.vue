@@ -103,6 +103,7 @@ export default {
       }
     },
     update (val) {
+      console.log(val)
       var vm = this
       var index = vm.avatars.findIndex(avatar => avatar.id === val.id)
       if (index !== -1) {
