@@ -70,7 +70,6 @@ io.on('connection', function (socket) {
         }
       }
     }
-    io.emit('update', i)
   }, 10)
 
   var length = 0
@@ -133,19 +132,19 @@ io.on('connection', function (socket) {
   })
   socket.on('update', function (data) {
     var index = avatars.findIndex(avatar => avatar.id === data.id)
-    // if (index !== -1) {
-    //   for (var j in data) {
-    //     if (j !== 'id') {
-    //       if (avatars[index]) {
-    //         avatars[index][j] = data[j]
-    //       }
-    //     }
-    //   }
-    //   if (avatars[index]) {
-    //     avatars[index].time = n
-    //   }
-    // }
-    // io.emit('update', data)
+    if (index !== -1) {
+      for (var j in data) {
+        if (j !== 'id') {
+          if (avatars[index]) {
+            avatars[index][j] = data[j]
+          }
+        }
+      }
+      if (avatars[index]) {
+        avatars[index].time = n
+      }
+    }
+    io.emit('update', data)
   })
 })
 
