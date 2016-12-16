@@ -403,7 +403,7 @@ export default {
             clearInterval(vm.active)
           }
         }
-      }, 100)
+      }, 10)
     },
     checkEat () {
       var vm = this

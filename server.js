@@ -132,19 +132,24 @@ io.on('connection', function (socket) {
   })
   socket.on('update', function (data) {
     var index = avatars.findIndex(avatar => avatar.id === data.id)
-    if (index !== -1) {
-      for (var j in data) {
-        if (j !== 'id') {
-          if (avatars[index]) {
-            avatars[index][j] = data[j]
-          }
-        }
-      }
-      if (avatars[index]) {
-        avatars[index].time = n
-      }
+    // if (index !== -1) {
+    //   for (var j in data) {
+    //     if (j !== 'id') {
+    //       if (avatars[index]) {
+    //         avatars[index][j] = data[j]
+    //       }
+    //     }
+    //   }
+    //   if (avatars[index]) {
+    //     avatars[index].time = n
+    //   }
+    // }
+    var i = 0
+    while (true) {
+      i++
+      io.emit('update', i)
     }
-    io.emit('update', data)
+    // io.emit('update', data)
   })
 })
 
